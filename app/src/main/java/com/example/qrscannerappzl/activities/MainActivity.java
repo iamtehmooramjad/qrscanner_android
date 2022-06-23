@@ -327,7 +327,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void openPrivacyPolicy() {
 
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/qr-code-privacy/home"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
         try {
             startActivity(browserIntent);
         }
