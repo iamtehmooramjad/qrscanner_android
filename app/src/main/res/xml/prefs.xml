@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="Enable Night Mode">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Night Mode"
+            android:key="night_mode"
+            android:summaryOn="Activated"
+            android:summaryOff="Deactivated">//key is just like id
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Beep">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Beep"
+            android:key="beep"
+            android:summaryOn="Activated"
+            android:summaryOff="Deactivated">//key is just like id
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Vibrate">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Vibrate"
+            android:key="vibrate"
+            android:summaryOn="Activated"
+            android:summaryOff="Deactivated">//key is just like id
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Copy to Clipboard">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Clipboard"
+            android:key="clipboard"
+            android:summaryOn="Activated"
+            android:summaryOff="Deactivated">//key is just like id
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Open URL automatically">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Url"
+            android:key="auro_url"
+            android:summaryOn="Activated"
+            android:summaryOff="Deactivated">//key is just like id
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

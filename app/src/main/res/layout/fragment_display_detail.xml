@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.DisplayDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="?attr/background"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scan_result_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="type"
+                android:textColor="?attr/blue_text_color"
+                android:textSize="24dp"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scanningResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Here scan  result will display"
+                android:textColor="?attr/text_font_color"
+                android:textSize="16dp"
+                android:textStyle="bold"></androidx.appcompat.widget.AppCompatTextView>
+
+
+            /////Horizontal Scroll view
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="10"
+                android:layout_height="wrap_content">
+
+                //left indicator
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:scrollbars="none"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/background"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/copy_horizontal_layout"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/copy_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/copy_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/copy_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Copy"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ///////////////////
+
+                        <LinearLayout
+                            android:id="@+id/share_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/share_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/nav_share_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/share_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Share"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        /////////////////
+
+                        <LinearLayout
+                            android:id="@+id/email_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/email_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/email_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/email_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Email"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/send_sms_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/send_sms_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/sms_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/send_sms_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Send\nSMS"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/add_contact_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/add_contact_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/add_contact">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/add_contact__horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Add\nContact"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ///////////////////CALL/////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/sms_call_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/sms_call_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/phone_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/sms_call_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Call"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/geo_location_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/geo_location_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/location_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/geo_locationhorizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Location"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/url_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/url_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/url_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/url_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Open\nURL"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/direction_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/direction_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/direction_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/direction_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Direction"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/show_location_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/show_location_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/location_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/show_location_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Location"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/add_event_horizontal_layout"
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/add_event_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                app:srcCompat="@drawable/add_event_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/add_event_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Add\nEvent"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/amazon_horizontal_layout"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/amazon_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                android:src="@drawable/amazon_white_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/amazon_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Search at\nAmazon"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/walmart_horizontal_layout"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/walmart_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                android:src="@drawable/flipkart_white_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/walmart_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Search at\nFlipKart"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+
+
+                        ////////////////////////////////////////
+
+                        <LinearLayout
+                            android:id="@+id/ebay_horizontal_layout"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="6">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ebay_horizontal_item_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_weight="4"
+                                android:src="@drawable/ebay_white_icon">
+
+                            </androidx.appcompat.widget.AppCompatImageView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/ebay_horizontal_item_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:text="Search at\nEbay"
+                                android:textAlignment="center"
+                                android:textColor="?attr/text_font_color"
+                                android:textSize="11sp"
+                                android:textStyle="bold">
+
+                            </androidx.appcompat.widget.AppCompatTextView>
+                        </LinearLayout>
+                        ////////////////////////////////////////
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </ScrollView>
+
+            <FrameLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/nativeadlayout"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.ads.NativeAdLayout
+                    android:id="@+id/native_ad_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/qr_image_cardview"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/scan_format"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="QR CODE"
+                        android:textColor="#000000"
+                        android:textSize="24dp"
+                        android:textStyle="bold">
+
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/qr_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY">
+
+                    </androidx.appcompat.widget.AppCompatImageView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/save_qr_btn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/save_icon">
+
+                        </androidx.appcompat.widget.AppCompatImageView>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/share_qr"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/nav_share_icon">
+
+                        </androidx.appcompat.widget.AppCompatImageView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

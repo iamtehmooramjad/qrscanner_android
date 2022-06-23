@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:text="UPDATE"
+        android:textColor="#fff"
+        android:background="?attr/blue_background"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/background"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:text="Name here"
+                android:hint="Title"
+                android:id="@+id/edit_name"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="8"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/view_fav"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="32dp"
+                android:layout_weight="1"
+                android:id="@+id/view_fav_image"
+                app:srcCompat="@drawable/grey_eye"
+                android:layout_height="32dp">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="32dp"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:textColor="?attr/text_subfont_color"
+                android:text="View detail"
+                android:layout_height="32dp">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="8"
+            android:layout_margin="16dp"
+            android:id="@+id/add_to_fav"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="32dp"
+                android:layout_weight="1"
+                android:id="@+id/add_to_fav_image"
+                app:srcCompat="@drawable/fav_uncheck_icon"
+                android:layout_height="32dp">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="32dp"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:textColor="?attr/text_subfont_color"
+                android:text="Add to Favorite"
+                android:layout_height="32dp">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="8"
+            android:id="@+id/delete"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="32dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/delete_icon"
+                android:layout_height="32dp">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="32dp"
+                android:layout_weight="6"
+                android:text="Delete"
+                android:textColor="?attr/text_subfont_color"
+                android:gravity="center_vertical"
+                android:layout_height="32dp">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="Save"
+            android:id="@+id/update_history_item"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:background="@drawable/btn_shape"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+</LinearLayout>

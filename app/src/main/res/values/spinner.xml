@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets_array">
+
+        <item>WPA/WPA2</item>
+        <item>WEP</item>
+        <item>No Password</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <group>
+        <item android:id="@+id/scan"
+            android:title="@string/scan"
+            android:icon="@drawable/ic_nav_scan_icon">
+        </item>
+        <item android:id="@+id/create"
+            android:title="@string/create"
+            android:icon="@drawable/nav_create_qr">
+        </item>
+        <item android:id="@+id/history"
+            android:title="@string/history"
+            android:icon="@drawable/nav_history_icon">
+        </item>
+        <item android:id="@+id/favorites"
+            android:title="@string/favorites"
+            android:icon="@drawable/nav_fav_icon">
+        </item>
+        <item android:id="@+id/setting"
+            android:title="@string/setting"
+            android:icon="@drawable/nav_setting_icon">
+        </item>
+    </group>
+    <group
+        android:id="@+id/design_menu_item_action_area" >
+        <item android:id="@+id/rateus"
+            android:title="@string/rate_us"
+            android:icon="@drawable/nav_rateus_icon">
+        </item>
+        <item android:id="@+id/share"
+            android:title="@string/share_app"
+            android:icon="@drawable/nav_share_icon">
+        </item>
+        <item android:id="@+id/privacy_policy"
+            android:title="@string/privacy_policy"
+            android:icon="@drawable/privacy_policy">
+        </item>
+
+    </group>
+
+</menu>

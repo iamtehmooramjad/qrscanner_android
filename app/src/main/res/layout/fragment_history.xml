@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HistoryFragment">
+
+    <LinearLayout
+            android:layout_above="@+id/banner_container"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/bottom_sheet"
+            android:layout_height="match_parent"
+            tools:context=".fragment.HistoryFragment">
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tab_layout"
+        app:tabSelectedTextColor="?attr/tab_layout_font_color"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:text="@string/scanned"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.tabs.TabItem>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:text="@string/created"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.tabs.TabItem>
+
+    </com.google.android.material.tabs.TabLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/empty_textview"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="@string/no_data_found"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+       <androidx.appcompat.widget.AppCompatTextView
+           android:layout_width="wrap_content"
+           android:text="@string/delete_all"
+           android:id="@+id/delete_all"
+           android:textAllCaps="false"
+           android:layout_marginRight="16dp"
+           android:textColor="?attr/blue_text_color"
+           android:layout_height="wrap_content">
+
+       </androidx.appcompat.widget.AppCompatTextView>
+    </LinearLayout>
+    <com.mlsdev.animatedrv.AnimatedRecyclerView
+        android:layout_height="fill_parent"
+        android:id="@+id/data_recyclerview"
+        app:animationDuration="600"
+        app:layoutManagerOrientation="vertical"
+        app:layoutManagerReverse="false"
+        app:layoutAnimation="@anim/layout_animation_from_bottom"
+        tools:listitem="@layout/itemview_for_history"
+        android:layout_width="match_parent">
+
+    </com.mlsdev.animatedrv.AnimatedRecyclerView>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</RelativeLayout>

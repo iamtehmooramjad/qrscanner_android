@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="dt">
+        <attr name="text_font_color" format="color"/>
+        <attr name="tab_layout_font_color" format="color"/>
+        <attr name="text_subfont_color" format="color"/>
+        <attr name="background_color" format="color"/>
+        <attr name="blue_background" format="color"/>
+        <attr name="cardview_background" format="color"/>
+        <attr name="button_text_color" format="color"/>
+        <attr name="button_background" format="color"/>
+        <attr name="blue_text_color" format="color" />
+        <attr name="qr_image_cardview" format="color" />
+        <attr name="frame_border" format="color" />
+    </declare-styleable>
+
+</resources>

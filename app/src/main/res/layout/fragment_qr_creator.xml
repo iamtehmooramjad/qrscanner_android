@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/background"
+    android:orientation="vertical"
+    tools:context=".fragment.QrCreatorFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="?attr/cardview_background"
+                android:padding="5dp"
+                app:cardCornerRadius="5dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+
+                    ////TEXT//////////////////
+
+                    <LinearLayout
+                        android:id="@+id/text_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+                        ///text qr creator input filed
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/text_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Text"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    ///TEXT END///////////
+
+
+                    //CLIPBOARD///////////////
+
+                    <LinearLayout
+                        android:id="@+id/clipboard_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        //Clipboard qr creator input filed
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/clipboard_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/clipboard_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    //CLIPBOARD ENDS////////////
+
+
+                    /////////////URL /////////
+
+                    <LinearLayout
+                        android:id="@+id/url_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        //URL qr creator input filed
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/url_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/url_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter URL">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    //URL ENDS
+
+
+                    ////PHONE NUMBER
+
+                    <LinearLayout
+                        android:id="@+id/phone_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        //Phone number QR creator
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/phone_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/phone_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Phone"
+                                    android:inputType="phone">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/phone_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    //PHONE NUMBER ENDS
+
+
+                    ///CONTACT VCARD START///////////////////
+
+                    <LinearLayout
+                        android:id="@+id/vcard_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            //name
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/vcard__name_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/vcard__name_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Name"
+                                    android:inputType="text">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/vcard__name_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+
+                        </LinearLayout>
+                        //company
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard__company_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard__company_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Company"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //email
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard__email_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard__email_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Email"
+                                android:inputType="textEmailAddress">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //phone
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard__phone_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard__phone_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Phone"
+                                android:inputType="phone">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //Cell
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_cell_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_cell_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Cell"
+                                android:inputType="number">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        //fax
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_fax_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_fax_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Fax"
+                                android:inputType="number">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        //street
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_street_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_street_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Street"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //City
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_city_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_city_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter City"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //Region/State
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard__region_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard__region_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Region/State"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //post code
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_post_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_post_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Postcode"
+                                android:inputType="number">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //country
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_country_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_country_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Country"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //URL
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/vcard_url_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vcard_url_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter URL"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    ///VCARD END////////////////////
+
+
+                    ///SMS Start
+
+                    <LinearLayout
+                        android:id="@+id/sms_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            //phone
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/sms_number_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/sms_number_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Phone Number"
+                                    android:inputType="phone">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/sms_number_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+
+                        //message
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/sms_message_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/sms_message_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Message"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    //SMS ENDS////
+
+
+                    /////////EMAIL START///////
+
+                    <LinearLayout
+                        android:id="@+id/email_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        //email
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/email_addres_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email_addres_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Email"
+                                android:inputType="textEmailAddress">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        //subject
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/email_subject__qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email_subject__qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Subject"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //Text
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/email_text_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email_text_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Text"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    //EMAIL ENDS/////////////////////
+
+
+                    ///BAR CODE START//////////
+
+                    <LinearLayout
+                        android:id="@+id/barcode_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        //barcode
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/barcode_number_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/barcode_number_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Barcode"
+                                android:inputType="number">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    ///BARCODE ENDS/////////////
+
+
+                    //GEO LOCATION STARTS///////////
+
+                    <LinearLayout
+                        android:id="@+id/geolocation_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            //Address
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/geolocation_address_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/geolocation_address_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Address to find the cordinates">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/geolocation_address_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/search_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+
+                        </LinearLayout>
+                        //lattitude
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/geolocation_latitude_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/geolocation_latitude_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Latitude manually"
+                                android:inputType="phone">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //Longitude
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/geolocation_longitude_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/geolocation_longitude_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Longitude manually"
+                                android:inputType="phone">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //Current location
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/geolocation_address_qr_creator_current_location_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/btn_shape"
+                            android:drawableLeft="@drawable/current_location"
+                            android:drawablePadding="-40dp"
+                            android:paddingLeft="20dp"
+                            android:text="Current Location"
+                            android:textColor="#fff">
+
+                        </androidx.appcompat.widget.AppCompatButton>
+
+                    </LinearLayout>
+                    /////GEOLOCATION ENDS/////////////
+
+
+                    ////APPLICATION STARTS/////////////
+
+                    <LinearLayout
+                        android:id="@+id/application_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            //url
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/application_url_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/application_url_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter URL manually"
+                                    android:inputType="text"
+                                    android:paddingEnd="40dp">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/application_url_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    ////APPLICATION ENDS
+
+                    //WIFI STARTS
+
+                    <LinearLayout
+                        android:id="@+id/wifi_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        //ssid
+                        //password
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/wifi_ssid_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/wifi_ssid_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter SSID"
+                                    android:inputType="text">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/wifi_ssid_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+
+
+                        //password
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/wifi_password_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/wifi_password_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter Password"
+                                android:inputType="textPassword">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        //select
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/wifi_spinner_qr_creator_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+
+                    </LinearLayout>
+                    //WIFI ENDS////////////
+
+
+                    ///EVENT START
+
+                    <LinearLayout
+                        android:id="@+id/event_creator_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            //event_title
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/event_title_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/event_title_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter event title"
+                                    android:inputType="text">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/event_title_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+
+                        //location
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:id="@+id/event_location_qr_creator_input_outline"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/event_location_qr_creator_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Enter event location"
+                                android:inputType="text">
+
+                            </com.google.android.material.textfield.TextInputEditText>
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            //start date
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/event_startdate_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/event_startdate_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter Start Date/Time"
+                                    android:inputType="text">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/event_startdate_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+                        //end date
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/event_enddate_qr_creator_input_outline"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/event_enddate_qr_creator_input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter End Date/Time"
+                                    android:inputType="text">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageButton
+                                android:id="@+id/event_enddate_qr_creator_input_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="-40dp"
+                                android:background="@drawable/add_btn_fr_edittext">
+
+                            </androidx.appcompat.widget.AppCompatImageButton>
+                        </LinearLayout>
+                    </LinearLayout>
+                    //EVENT ENDS
+
+                    //Create QR Button
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/create_qr_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_shape"
+                        android:text="Create"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:textStyle="bold">
+
+                    </androidx.appcompat.widget.AppCompatButton>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        /////////////////////////////////////////////////////////////////////
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

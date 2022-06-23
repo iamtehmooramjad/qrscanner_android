@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QRScannerAppZL" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+
+        <item name="colorAccent">#ffffff</item>
+        <!-- Customize your theme here. -->
+        <item name="text_font_color">#ffffff</item>
+        <item name="text_subfont_color">#ffffff</item>
+        <item name="background">@color/black</item>
+        <item name="blue_background">@color/black</item>
+        <item name="tab_layout_font_color">#ffffff</item>
+        <item name="cardview_background">@color/black</item>
+        <item name="button_text_color">@color/black</item>
+        <item name="button_background">@color/white</item>
+        <item name="blue_text_color">@color/white</item>
+        <item name="qr_image_cardview">@color/grey_60</item>
+        <item name="frame_border">@color/white</item>
+
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="actionModeStyle">@style/ActionMode</item>
+
+    </style>
+
+
+    -
+
+    <style name="ActionMode" parent="Widget.AppCompat.ActionMode">
+
+        <item name="background">@color/black</item>
+
+    </style>
+
+
+</resources>
